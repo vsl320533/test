@@ -1,0 +1,42 @@
+.marquee-message {
+  width: 100%;
+  overflow: hidden;
+  background: #f4f0e6;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  white-space: nowrap;
+}
+
+.marquee-track {
+  display: inline-flex;
+  width: max-content;
+  animation: marquee-scroll 24s linear infinite;
+}
+
+.marquee-track span {
+  display: inline-block;
+  padding: 9px 55px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1d3557;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-33.333%);
+  }
+}
+
+@media (max-width: 768px) {
+  .marquee-track span {
+    padding: 8px 35px;
+    font-size: 14px;
+  }
+
+  .marquee-track {
+    animation-duration: 20s;
+  }
+}

@@ -1,0 +1,183 @@
+.hero {
+  position: relative;
+  min-height: 680px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  background-image: url("/images/hero/hrsa-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 32, 63, 0.9) 0%,
+    rgba(0, 48, 91, 0.72) 45%,
+    rgba(0, 48, 91, 0.25) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 80px 40px;
+  color: #ffffff;
+}
+
+.hero-label {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding-left: 14px;
+
+  border-left: 4px solid #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  max-width: 800px;
+  margin: 0 0 24px;
+
+  font-size: clamp(42px, 5vw, 72px);
+  line-height: 1.08;
+  font-weight: 700;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 0 0 34px;
+
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 140px;
+  padding: 14px 24px;
+
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: all 0.25s ease;
+}
+
+.hero-btn.primary {
+  background: #ffffff;
+  color: #003b6f;
+}
+
+.hero-btn.primary:hover {
+  background: #eaf3fa;
+}
+
+.hero-btn.secondary {
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  color: #ffffff;
+}
+
+.hero-btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.hero-scroll {
+  position: absolute;
+  z-index: 2;
+
+  bottom: 30px;
+  right: 40px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #ffffff;
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.scroll-arrow {
+  font-size: 20px;
+}
+
+/* ================================
+   Tablet
+================================ */
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: 600px;
+  }
+
+  .hero-content {
+    padding: 70px 30px;
+  }
+
+  .hero h1 {
+    font-size: clamp(40px, 7vw, 58px);
+  }
+}
+
+/* ================================
+   Mobile
+================================ */
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 650px;
+  }
+
+  .hero-content {
+    padding: 60px 22px;
+  }
+
+  .hero-label {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+    line-height: 1.12;
+  }
+
+  .hero p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-btn {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+}
